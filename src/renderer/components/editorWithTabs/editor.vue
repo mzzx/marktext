@@ -1010,8 +1010,7 @@ export default {
         header,
         footer,
         headerFooterStyled,
-        htmlTitle,
-        tocEnabled
+        htmlTitle
       } = options
 
       if (!/^pdf|print|styledHtml$/.test(type)) {
@@ -1019,7 +1018,7 @@ export default {
       }
 
       const extraCss = getCssForOptions(options)
-      const htmlToc = tocEnabled ? getHtmlToc(this.editor.getTOC(), options) : null
+      const htmlToc = getHtmlToc(this.editor.getTOC(), options)
 
       switch (type) {
         case 'styledHtml': {

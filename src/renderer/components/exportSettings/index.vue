@@ -196,11 +196,6 @@
 
         <el-tab-pane label="Table of Contents" name="toc">
           <bool
-            description="Enable table of contents:"
-            :bool="tocEnabled"
-            :onChange="value => onSelectChange('tocEnabled', value)"
-          ></bool>
-          <bool
             description="Include top heading:"
             :bool="tocIncludeTopHeading"
             :onChange="value => onSelectChange('tocIncludeTopHeading', value)"
@@ -286,7 +281,6 @@ export default {
       headerFooterCustomize: false,
       headerFooterStyled: true,
       headerFooterFontSize: 12,
-      tocEnabled: false,
       tocTitle: '',
       tocIncludeTopHeading: true
     }
@@ -348,7 +342,6 @@ export default {
         headerFooterCustomize,
         headerFooterStyled,
         headerFooterFontSize,
-        tocEnabled,
         tocTitle,
         tocIncludeTopHeading
       } = this
@@ -365,7 +358,6 @@ export default {
         autoNumberingHeadings,
         showFrontMatter,
         theme: theme === 'default' ? null : theme,
-        tocEnabled,
         tocTitle,
         tocIncludeTopHeading
       }
